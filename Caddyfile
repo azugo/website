@@ -3,6 +3,8 @@
   encode zstd gzip
   file_server
 
+  header -Server
+
   handle_errors {
     rewrite * /404.html
     file_server

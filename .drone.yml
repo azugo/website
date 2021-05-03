@@ -1,0 +1,39 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: build
+    pull: always
+    image: plugins/hugo:latest
+    commands:
+      - hugo --cleanDestinationDir
+
+  - name: publish
+    pull: always
+    image: plugins/docker:latest
+    settings:
+      auto_tag: true
+      repo: registry.pico.ninja/azugo/website
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+    when:
+      event:
+        exclude:
+          - pull_request
+
+  - name: deploy
+    pull: always
+    image: byrnedo/alpine-curl
+    commands:
+      - 'curl --silent --show-error --fail -X POST -H "Content-Type: application/json" -d "{}" $PORTAINER_WEBHOOK_TV'
+    environment:
+      PORTAINER_WEBHOOK:
+        from_secret: portainer_webhook
+    when:
+      event:
+        exclude:
+          - pull_request

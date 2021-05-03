@@ -1,0 +1,26 @@
+baseURL: https://azugo.io/
+languageCode: en-us
+title: Azugo Go web framework
+theme: "PaperMod"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+permalinks:
+  page: /:slug/
+
+minify:
+  disableXML: false
+  minifyOutput: false
+
+params:
+  profileMode:
+    enabled: true
+    title: Azugo
+    subtitle: Opionated Go web framework
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/azugo/azugo"

@@ -12,7 +12,7 @@ permalinks:
   page: /:slug/
 
 minify:
-  disableXML: false
+  disableXML: true
   minifyOutput: false
 
 params:

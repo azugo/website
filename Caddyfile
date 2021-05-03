@@ -6,4 +6,6 @@
     rewrite * /404.html
     file_server
   }
+
+  rewrite /azugo /azugo/
 }

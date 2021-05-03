@@ -1,5 +1,6 @@
 :80 {
   root * /srv/www
+  encode zstd gzip
   file_server
 
   handle_errors {

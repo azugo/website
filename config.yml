@@ -20,6 +20,9 @@ params:
     enabled: true
     title: Azugo
     subtitle: Opionated Go web framework
+    imageUrl: logo.svg
+    imageWidth: 150
+    imageHeight: 150
 
   socialIcons:
     - name: github

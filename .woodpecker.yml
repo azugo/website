@@ -1,0 +1,39 @@
+clone:
+  git:
+    image: woodpeckerci/plugin-git
+    recursive: true
+    submodule_update_remote: true
+
+pipeline:
+  build:
+    image: plugins/hugo:latest
+    pull: true
+    commands:
+    - hugo --cleanDestinationDir
+
+  publish:
+    image: plugins/docker:latest
+    pull: true
+    settings:
+      registry: code.pico.ninja
+      repo: code.pico.ninja/azugo/website
+      tags:
+      - latest
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+    when:
+      branch: main
+      event: push
+
+  deploy:
+    image: byrnedo/alpine-curl
+    pull: true
+    secrets:
+    - portainer_webhook
+    commands:
+    - "curl --silent --show-error --fail -X POST -H \"Content-Type: application/json\" -d \"{}\" $PORTAINER_WEBHOOK"
+    when:
+      branch: main
+      event: push

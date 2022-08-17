@@ -8,8 +8,9 @@ pipeline:
   build:
     image: plugins/hugo:latest
     pull: true
-    commands:
-    - hugo --cleanDestinationDir
+    settings:
+      hugo_version: 0.101
+      validate: true
 
   publish:
     image: plugins/docker:latest

@@ -10,7 +10,6 @@ pipeline:
     pull: true
     settings:
       hugo_version: 0.101.0
-      validate: true
 
   publish:
     image: plugins/docker:latest

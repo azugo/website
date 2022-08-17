@@ -1,3 +1,38 @@
+:root {
+  --main-width: 90%;
+  --nav-width: 100%;
+  --side-width: 300px;
+}
+
+.post-container {
+  display: flex;
+}
+
+.post-container > sidenav {
+  flex: 0 0 var(--side-width);
+  margin-right: var(--gap);
+}
+
+.post-container > article {
+  flex: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .post-container {
+    display: block;
+  }
+
+
+  .post-container > sidenav {
+    margin-right: 0;
+  }
+}
+
+.page-header.search, #searchbox {
+  max-width: 720px;
+  margin: 24px auto var(--content-gap);
+}
+
 .footer > span:last-child {
     display: none;
 }

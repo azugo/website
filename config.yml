@@ -8,12 +8,25 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-permalinks:
-  page: /:slug/
-
 minify:
   disableXML: true
   minifyOutput: false
+
+outputs:
+  home:
+    - HTML
+    - JSON
+
+permalinks:
+  page: /:slug/
+  docs: /docs/:sections[last]/:slug/
+  goimport: /:slug/
+
+menu:
+  main:
+    - name: Docs
+      url: docs/current/
+      weight: 1
 
 params:
   profileMode:
@@ -23,6 +36,8 @@ params:
     imageUrl: logo.svg
     imageWidth: 150
     imageHeight: 150
+
+  tocopen: true
 
   socialIcons:
     - name: github

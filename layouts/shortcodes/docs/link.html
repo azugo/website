@@ -1,0 +1,13 @@
+{{ $page := "" }}
+{{ if .IsNamedParams }}
+  {{ $page = .Get "page" }}
+{{ else }}
+  {{ $page = .Get 0 }}
+{{ end }}
+
+
+{{ if $page }}
+  {{ with .Page.GetPage $page }}
+    <a href="{{ relref $ $page }}">{{ .LinkTitle }}</a>
+  {{ end }}
+{{ end }}

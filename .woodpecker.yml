@@ -9,7 +9,7 @@ pipeline:
     image: plugins/hugo:latest
     pull: true
     settings:
-      hugo_version: 0.101
+      hugo_version: 0.101.0
       validate: true
 
   publish:

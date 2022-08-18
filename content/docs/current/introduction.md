@@ -43,7 +43,7 @@ func main() {
 
   app.Get("/", func(ctx *azugo.Context) {
     ctx.Text("Hello, World!")
-  })<!--more-->
+  })
 
   azugo.Run(app)
 }
@@ -59,3 +59,19 @@ When using Azugo [server package](https://pkg.go.dev/azugo.io/azugo/server) it i
 * CORS headers based on configuration
 
 To see how to get started follow this guide: {{< docs/link "getting-started.md" >}}.
+
+## Default configuration environment variables
+
+There are multiple built-in environment variables that
+can be used to configure your application.
+
+This is the list of most commonly needed environment variables:
+
+* `ENVIRONMENT` - Current environment the service is run in. By default production environment will be used. Allowed values are:
+  * `Development`
+  * `Staging`
+  * `Production`
+* `SERVER_URLS` - List of URLs that server will listen on separated by semicolon (`;`), ex. `http://localhost:3000`. By default server will listen on `http://0.0.0.0:80/`.
+* `BASE_PATH` - If service will be hosted under subpath this will be used as base path for all routes.
+* `REVERSE_PROXY_TRUSTED_IPS` - list of trusted proxy server IP addresses or network masks separated by semicolon (`;`). By default only `127.0.0.1` is trusted.
+* `REVERSE_PROXY_LIMIT` - Number of chained reverse proxy servers trusted. By default only `1` reverse proxy is trusted.

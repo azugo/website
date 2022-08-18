@@ -34,6 +34,44 @@
   margin: 24px auto var(--content-gap);
 }
 
+.tab-content > .tab-pane {
+  display: none;
+}
+
+.tab-content > .active {
+  display: block;
+}
+
+.nav-tabs {
+  list-style-type: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.nav-tabs > li {
+  float: left;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  border: 1px solid var(--tertiary);
+  margin-right: var(--radius);
+}
+
+.nav-tabs > li.active {
+  border-bottom-style: none;
+}
+
+.nav-tabs > li > a {
+  color: var(--secondary);
+  display: block;
+  padding: 5px 10px;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+  color: var(--primary) !important;
+  background-color: var(--entry);
+}
+
 .footer > span:last-child {
     display: none;
 }

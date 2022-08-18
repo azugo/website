@@ -12,6 +12,11 @@ minify:
   disableXML: true
   minifyOutput: false
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 outputs:
   home:
     - HTML

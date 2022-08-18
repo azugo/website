@@ -143,19 +143,24 @@ func init() {
 * Now run `go mod tidy` to clean and download needed dependencies.
 * To run project in development mode first we need to set environment variables:
 
-On Linux:
+{{% tabs %}}
+{{% tab "Linux" %}}
 
 ```sh
 export ENVIRONMENT=Development
 export SERVER_URLS=http://localhost:3000/
 ```
 
-On Windows:
+{{% /tab %}}
+{{% tab "Windows" %}}
 
 ```sh
 SET ENVIRONMENT=Development
 SET SERVER_URLS=http://localhost:3000/
 ```
+
+{{% /tab %}}
+{{% /tabs %}}
 
 * Now project can be started and accessed on address http://localhost:3000/
 

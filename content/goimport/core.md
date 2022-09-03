@@ -1,6 +1,6 @@
 ---
-date: ""
 title: "Azugo Core"
+slug: core
 weight: 5
 draft: false
 goimport: "azugo.io/core git https://github.com/azugo/core"

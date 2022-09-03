@@ -8,7 +8,7 @@ gosource: "azugo.io/core https://github.com/azugo/core https://github.com/azugo/
 searchHidden: true
 ---
 
-This is the URL of the import path for [Azugo](http://github.com/azugo/core).
+This is the URL of the import path for [Azugo Core](http://github.com/azugo/core).
 
 <!--more-->
 

@@ -1,5 +1,5 @@
 ---
-date: ""
+slug: "azugo"
 title: "Azugo"
 weight: 10
 draft: false

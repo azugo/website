@@ -154,7 +154,7 @@ export SERVER_URLS=http://localhost:3000/
 {{% /tab %}}
 {{% tab "Windows" %}}
 
-```sh
+```bat
 SET ENVIRONMENT=Development
 SET SERVER_URLS=http://localhost:3000/
 ```

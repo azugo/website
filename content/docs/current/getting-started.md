@@ -130,7 +130,7 @@ func runWeb(cmd *cobra.Command, args []string) error {
     ctx.Text("Hello, World!")
   })
 
-  azugo.Run(app)
+  server.Run(app)
   return nil
 }
 

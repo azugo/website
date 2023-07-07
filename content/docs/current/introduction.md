@@ -45,7 +45,7 @@ func main() {
     ctx.Text("Hello, World!")
   })
 
-  azugo.Run(app)
+  server.Run(app)
 }
 ```
 

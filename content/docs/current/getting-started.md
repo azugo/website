@@ -165,7 +165,7 @@ SET SERVER_URLS=http://localhost:3000/
 * Now project can be started and accessed on address http://localhost:3000/
 
 ```sh
-go run cmd/server/*.go
+go run ./cmd/server
 ```
 
 Output will look something like:
